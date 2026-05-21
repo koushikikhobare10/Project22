@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Bestie 💖</title>
+
+<link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap)" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#d6e6ff,#fff0c9);
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* Floating Hearts */
+
+.hearts span{
+    position:fixed;
+    bottom:-100px;
+    font-size:20px;
+    animation:float 10s linear infinite;
+    opacity:0.7;
+    z-index:-1;
+}
+
+.hearts span:nth-child(1){left:10%; animation-delay:0s;}
+.hearts span:nth-child(2){left:20%; animation-delay:2s;}
+.hearts span:nth-child(3){left:35%; animation-delay:4s;}
+.hearts span:nth-child(4){left:50%; animation-delay:1s;}
+.hearts span:nth-child(5){left:65%; animation-delay:5s;}
+.hearts span:nth-child(6){left:80%; animation-delay:3s;}
+.hearts span:nth-child(7){left:90%; animation-delay:6s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#ff4f8b;
+    margin-bottom:20px;
+    animation:fadeIn 2s ease;
+}
+
+.hero p{
+    font-size:1.3rem;
+    max-width:700px;
+    margin-bottom:35px;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ff4f8b;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    background:#ff2e73;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:3.5rem;
+    color:#ff4f8b;
+    margin-bottom:20px;
+    font-family:'Dancing Script',cursive;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:1.1rem;
+}
+
+/* MEMORIES */
+
+.memory-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.memory-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    transition:0.5s;
+}
+
+.memory-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.memory-card img,
+.memory-card video{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+    color:white;
+}
+
+.overlay h2{
+    font-size:1.3rem;
+}
+
+/* TIMELINE */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:4px;
+    background:#ff4f8b;
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left:-2px;
+}
+
+.container{
+    padding:20px 40px;
+    position:relative;
+    width:50%;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    left:50%;
+}
+
+.content{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.container::after{
+    content:'💖';
+    position:absolute;
+    width:35px;
+    height:35px;
+    right:-17px;
+    top:25px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.right::after{
+    left:-17px;
+}
+
+.journey-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.journey-card .journey-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    flex-shrink:0;
+}
+
+.journey-card .journey-side-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    flex-shrink:0;
+}
+
+.journey-text h3{
+    margin-bottom:10px;
+    color:#ff4f8b;
+}
+
+@media(max-width:768px){
+
+    .journey-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .journey-card .journey-img,
+    .journey-card .journey-side-img{
+        width:100%;
+        height:180px;
+    }
+
+}
+
+/* LETTER */
+
+.letter{
+    background:rgba(255,255,255,0.5);
+    backdrop-filter:blur(10px);
+    padding:50px;
+    border-radius:30px;
+    line-height:2;
+    font-size:1.1rem;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.letter h2{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:#ff4f8b;
+    font-family:'Dancing Script',cursive;
+}
+
+/* SURPRISE */
+
+.surprise{
+    text-align:center;
+}
+
+#message{
+    margin-top:30px;
+    font-size:2rem;
+    color:#ff2e73;
+    display:none;
+    animation:pop 1s ease;
+}
+
+@keyframes pop{
+    0%{
+        transform:scale(0);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* CAKE SECTION */
+
+.cake-section{
+    text-align:center;
+    padding:100px 8%;
+    background:linear-gradient(135deg,#ffe4ec,#fff5e6);
+}
+
+.cake-container{
+    position:relative;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.cake{
+    font-size:150px;
+    animation:cakeBounce 2s ease-in-out infinite;
+    transition:transform 0.3s ease;
+}
+
+.cake:hover{
+    transform:scale(1.1);
+}
+
+@keyframes cakeBounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.candles{
+    position:absolute;
+    top:-30px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:15px;
+}
+
+.flame{
+    font-size:30px;
+    animation:flicker 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes flicker{
+    0%{
+        opacity:1;
+        transform:scale(1) rotate(-5deg);
+    }
+    100%{
+        opacity:0.7;
+        transform:scale(1.1) rotate(5deg);
+    }
+}
+
+.wish-text{
+    font-size:2.5rem;
+    color:#ff4f8b;
+    font-family:'Dancing Script',cursive;
+    margin-bottom:30px;
+    animation:pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+        opacity:1;
+    }
+    50%{
+        transform:scale(1.05);
+        opacity:0.8;
+    }
+}
+
+.cut-instruction{
+    font-size:1.3rem;
+    color:#666;
+    margin-top:20px;
+    animation:fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut{
+    0%,100%{
+        opacity:0.5;
+    }
+    50%{
+        opacity:1;
+    }
+}
+
+.cake-cut{
+    display:none;
+    animation:celebrate 1s ease;
+}
+
+@keyframes celebrate{
+    0%{
+        transform:scale(0) rotate(-180deg);
+        opacity:0;
+    }
+    100%{
+        transform:scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+
+.cake-message{
+    font-size:2rem;
+    color:#ff2e73;
+    margin-top:30px;
+    font-family:'Dancing Script',cursive;
+}
+
+.sparkles{
+    position:fixed;
+    pointer-events:none;
+    z-index:1000;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:1rem;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .title{
+        font-size:2.5rem;
+    }
+
+    .memory-card img,
+    .memory-card video{
+        height:280px;
+    }
+
+    .timeline::after{
+        left:20px;
+    }
+
+    .container{
+        width:100%;
+        padding-left:60px;
+        padding-right:20px;
+    }
+
+    .right{
+        left:0;
+    }
+
+    .container::after{
+        left:0;
+    }
+
+    .cake{
+        font-size:100px;
+    }
+
+    .wish-text{
+        font-size:1.8rem;
+    }
+
+}
+/* COUNTDOWN */
+.countdown-section{
+    text-align:center;
+    padding:100px 8%;
+}
+
+#countdown{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.time-box{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    min-width:100px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.time-box span{
+    font-size:2.5rem;
+    color:#ff4f8b;
+    font-weight:bold;
+    display:block;
+}
+
+.time-box label{
+    font-size:1rem;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+
+<div class="hearts">
+    <span>💖</span>
+    <span>✨</span>
+    <span>🌸</span>
+    <span>💖</span>
+    <span>✨</span>
+    <span>💖</span>
+    <span>🌸</span>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="birthdayMusic" loop>
+    <source src="happy-birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <h1>Happy Birthday Bestie 🎂</h1>
+
+    <p>
+        Thank you for being the most beautiful part of my life.
+        Every moment with you became a memory I'll always cherish 💖
+        I hope this year brings you endless happiness, love, and success.
+        I can't wait to celebrate this special day with you and create more unforgettable memories together 🎉.
+        Hope to see you soon in some hoursss 😁🥰
+    </p>
+
+    <button class="btn" onclick="scrollToMemories()">
+        Open Your Surprise 🎁
+    </button>
+
+</section>
+
+<!-- MEMORIES SECTION -->
+
+<section id="memories">
+
+    <h2 class="title">Our Memories 📸</h2>
+
+    <p class="subtitle">
+        Every picture tells a story of laughter, happiness, and friendship ✨
+    </p>
+
+    <div class="memory-container">
+
+        <!-- IMAGE 1 -->
+
+        <div class="memory-card">
+            <img src="img1.jpeg" alt="Memory 1">
+
+            <div class="overlay">
+                <h2>Beautiful Moments 🌸</h2>
+            </div>
+        </div>
+
+        <!-- IMAGE 2 -->
+
+        <div class="memory-card">
+            <img src="img2.jpeg" alt="Memory 2">
+
+            <div class="overlay">
+                <h2>Best Day Together 💕</h2>
+            </div>
+        </div>
+
+        <!-- IMAGE 3 -->
+
+       <div class="memory-card">
+
+            <video autoplay muted loop controls>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay">
+                <h2>Our Moment 💖</h2>
+            </div>
+
+        </div>
+
+        <!-- VIDEO -->
+
+        <div class="memory-card">
+
+            <video autoplay muted loop controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay">
+                <h2>Our Special Video 🎥</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TIMELINE -->
+
+<section>
+
+    <h2 class="title">Our Journey 🌈</h2>
+
+    <div class="timeline">
+
+        <!-- CARD 1 -->
+
+        <div class="container left">
+
+            <div class="content journey-card">
+
+                <img class="journey-img" src="img5.jpg" alt="Journey 1">
+
+                <div class="journey-text">
+                    <h3>It all Started here ✨</h3>
+                    <p>
+                        The beginning of the most precious friendship.
+                    </p>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="container right">
+
+            <div class="content journey-card">
+
+                <img class="journey-img" src="img4.jpeg" alt="Journey 2">
+
+                <div class="journey-text">
+                    <h3>The Most Beautiful Moments 🌟 of our First meeting</h3>
+                    <p>
+                        Going to Dagdusheth Ganapti temple together!! Anything I would'nt have imagine more precious than thissss 🥹🥹
+                    </p>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="container left">
+
+            <div class="content journey-card">
+
+                <img class="journey-img" src="img1.jpeg" alt="Journey 3">
+
+                <div class="journey-text">
+                    <h3>Always There 💖</h3>
+                    <p>
+                        Through every phase of your life, I will always be there for you.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CAKE SECTION -->
+
+<section class="cake-section" id="cakeSection">
+
+    <h2 class="title">Birthday Cake 🎂</h2>
+    <h4>I knowwww you don't want to celebrate but virtually toh kar hi sakte hai naaaaa 😚😉</h4>
+
+    <div id="cakeArea">
+
+        <p class="wish-text" id="wishText">✨ Make a Wish ✨</p>
+
+        <div class="cake-container" id="cakeContainer" onclick="cutCake()">
+
+            <div class="candles" id="candles">
+                <span class="flame">🔥</span>
+                <span class="flame">🔥</span>
+                <span class="flame">🔥</span>
+            </div>
+
+            <div class="cake" id="cake">🎂</div>
+
+        </div>
+
+        <p class="cut-instruction" id="cutInstruction">👆 Touch the cake to cut it! 👆</p>
+
+    </div>
+
+    <div class="cake-cut" id="cakeCut">
+
+        <div style="font-size:120px;">🍰✨🎉</div>
+
+        <p class="cake-message">
+            Yaayyy! 🎊 Happy Birthday! 🎊<br>
+            May all your wishes come true! 💖
+        </p>
+
+    </div>
+
+</section>
+
+<!-- LETTER -->
+
+<section>
+
+    <div class="letter">
+
+        <h2>Dear Best Friend 💌</h2>
+
+        <p>
+            Cheers to another year of our amazing friendship and to many more years to come! 🥂
+            To the most mosttt mostttt amazing, special, best person and to my everything Happyyyy, Happierrrr, HAppiestttt
+            Birthdayyyyyyy to youuuuuuu Sahil! ✨❤️ 
+            I hope ki dev tula thod kamiiii maturegiri deude 😁
+           Me kharachhhh tuzya shivay life imagine nahi akru shakat and never want to imagine too.
+            No matter where life takes us,
+            our friendship will always stay special to me.
+            Also no more now ki kasshhhhhh I would celebrate this day with youuuuuuu 😁🥰 because yesssss
+            finallyyyyy yaaarrr finallyyyyyy we are going to meet after such a long timeeeeeee 🥹🥹🥹🥹
+            No matter how fequently we fight butttt still I would alwaysss and alwayssss wish 
+            to be bestfriendsssss and share the same bond foreverrrrrr and foreverrrr with youuuuuuuuuuuuuu 💖
+            I knowwwww you are going through such a crucial point of life butttttt 
+            I also know kiiii this will end too and you will be mosttt happiest and successful person in the world and I will always be there to support youuuuuuuuuuuuuu in every phase of life and in every decision of life because that's what bestfriendsssss do for each otherrrr 💖
+            And I will be the proudesttttt one to see youuuuuuuuuuuuuu achieving all your dreams and goals and becoming the most successful person in the world because you truly deserve itttttt 💖
+            I hope your life gets filled with happiness,
+            success,
+            love,
+            peace,
+            and countless beautiful memories.
+
+            You truly deserve the world 💖
+            <br>
+
+        </p>
+        <p>Teri sakhi,</p>
+        <p>Koushiki</p>
+
+    </div>
+
+</section>
+
+<!-- COUNTDOWN SECTION -->
+<section class="countdown-section">
+    <h2 class="title">Countdown ⏳</h2>
+
+    <p class="subtitle">Can't Wait to seee youuuuu💖</p>
+
+    <div id="countdown">
+        <div class="time-box">
+            <span id="days">00</span>
+            <label>Days</label>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <label>Hours</label>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <label>Minutes</label>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <label>Seconds</label>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    Made with love and countless memories ✨
+</footer>
+
+<script>
+
+function scrollToMemories(){
+
+    document.getElementById("memories").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+function showMessage(){
+
+    document.getElementById("message").style.display = "block";
+
+    for(let i=0;i<100;i++){
+
+        let confetti = document.createElement("div");
+
+        confetti.innerHTML = "🎉";
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random()*100 + "vw";
+        confetti.style.top = "-20px";
+        confetti.style.fontSize = "30px";
+        confetti.style.zIndex = "999";
+
+        document.body.appendChild(confetti);
+
+        let fall = setInterval(()=>{
+
+            confetti.style.top =
+            parseInt(confetti.style.top) + 5 + "px";
+
+            if(parseInt(confetti.style.top) > window.innerHeight){
+
+                clearInterval(fall);
+                confetti.remove();
+
+            }
+
+        },30);
+
+    }
+
+}
+
+let cakeCutDone = false;
+
+function cutCake(){
+
+    if(cakeCutDone) return;
+    cakeCutDone = true;
+
+    // Play birthday music
+    let music = document.getElementById("birthdayMusic");
+    music.volume = 0.5;
+    music.play().catch(function(e){
+        console.log("Audio play failed:", e);
+    });
+
+    // Hide cake area
+    document.getElementById("cakeArea").style.display = "none";
+
+    // Show cut cake celebration
+    let cakeCut = document.getElementById("cakeCut");
+    cakeCut.style.display = "block";
+
+    // Create sparkles and confetti
+    createCelebration();
+
+}
+let musicStarted = false;
+
+function startMusic() {
+    if (musicStarted) return;
+    musicStarted = true;
+
+    let music = document.getElementById("birthdayMusic");
+    music.volume = 0.5;
+
+    music.play().catch((e) => {
+        console.log("Autoplay blocked:", e);
+    });
+}
+
+// start music on first click anywhere
+document.addEventListener("click", startMusic);
+function createCelebration(){
+
+    let emojis = ["🎉", "🎊", "✨", "💖", "🌟", "🎈", "🥳", "💫", "🎁", "🍰"];
+
+    for(let i = 0; i < 150; i++){
+
+        setTimeout(function(){
+
+            let sparkle = document.createElement("div");
+            sparkle.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            sparkle.style.position = "fixed";
+            sparkle.style.left = Math.random() * 100 + "vw";
+            sparkle.style.top = "-50px";
+            sparkle.style.fontSize = (20 + Math.random() * 30) + "px";
+            sparkle.style.zIndex = "1000";
+            sparkle.style.pointerEvents = "none";
+            sparkle.style.opacity = "1";
+
+            document.body.appendChild(sparkle);
+
+            let posY = -50;
+            let posX = parseFloat(sparkle.style.left);
+            let speedY = 3 + Math.random() * 4;
+            let speedX = (Math.random() - 0.5) * 3;
+            let rotation = 0;
+            let rotationSpeed = (Math.random() - 0.5) * 10;
+
+            let fallInterval = setInterval(function(){
+
+                posY += speedY;
+                posX += speedX;
+                rotation += rotationSpeed;
+
+                sparkle.style.top = posY + "px";
+                sparkle.style.left = posX + "vw";
+                sparkle.style.transform = "rotate(" + rotation + "deg)";
+
+                if(posY > window.innerHeight + 50){
+                    clearInterval(fallInterval);
+                    sparkle.remove();
+                }
+
+            }, 30);
+
+        }, i * 30);
+
+    }
+
+}
+
+// Countdown to 22 May 10:00 AM
+const targetDate = new Date("May 22, 2026 10:00:00").getTime();
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML =
+            "<h2>🎉 The Moment Has Arrived! 🎉</h2>";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>
